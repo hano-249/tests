@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0f172a">
+    <title>GainerStack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png"> <!-- Placeholder ref -->
+</head>
+<body>
+
+    <!-- Header / Streak Display -->
+    <header>
+        <div class="brand">GAINER<span class="highlight">STACK</span></div>
+        <div class="streak-container">
+            <span id="streak-count">0</span> Day Streak 🔥
+        </div>
+    </header>
+
+    <!-- MAIN APP CONTAINER -->
+    <main id="app">
+        <!-- Views will be injected here by app.js -->
+    </main>
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav">
+        <button onclick="router('dashboard')" class="nav-btn active" id="nav-dash">
+            Today
+        </button>
+        <button onclick="router('workout')" class="nav-btn" id="nav-work">
+            Workout
+        </button>
+        <button onclick="router('profile')" class="nav-btn" id="nav-prof">
+            Stats
+        </button>
+    </nav>
+
+    <script src="app.js"></script>
+    <script>
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('SW Registered'))
+                .catch(err => console.log('SW Error', err));
+        }
+    </script>
+</body>
+</html>

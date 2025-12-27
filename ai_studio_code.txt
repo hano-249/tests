@@ -1,0 +1,21 @@
+{
+  "name": "GainerStack",
+  "short_name": "GainerStack",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192/38bdf8/ffffff?text=GS",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512/38bdf8/ffffff?text=GS",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
